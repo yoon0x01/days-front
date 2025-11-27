@@ -22,9 +22,11 @@ export default function CommonLayout() {
 
     return (
         <div>
-            <CommonHeader />
-            <Outlet />
-            <CommonFooter />
+            {/*<CommonHeader/>*/}
+            <div id="content-fixed" className="min-h-screen lg:min-h-fit pt-[56px] pb-[64px] lg:pt-0 lg:pb-0">
+                <Outlet/>
+                <CommonFooter/>
+            </div>
         </div>
     )
 }
