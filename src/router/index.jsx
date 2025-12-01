@@ -12,7 +12,7 @@ const router = createBrowserRouter([
             { index: true, element: <Main /> },
 
             // 로그인
-            { ptah: 'login', element: <Login /> },
+            { path: 'login', element: <Login /> },
         ]
     }
 ]);
