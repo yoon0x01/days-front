@@ -1,7 +1,7 @@
 import {create} from 'zustand';
 import {persist} from 'zustand/middleware';
 
-// region -- 인증 정보
+// 인증 정보
 const initialAuthState = {
     isLogin: false,
     token: null,
@@ -17,4 +17,14 @@ export const useAuthStore = create(
         { name: 'auth' }
     )
 );
-// endregion
+
+// 푸터 정보
+const initialFooterState = {
+    isShow: true,
+};
+
+export const useFooterStore = create((set) => ({
+    ...initialFooterState,
+    setFooter: (newState) => set((state) => ({ ...state, ...newState })),
+    initFooter: () => set({ ...initialFooterState }),
+}));
