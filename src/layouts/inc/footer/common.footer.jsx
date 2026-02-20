@@ -39,7 +39,7 @@ export default function CommonFooter() {
     ];
 
     return (
-        <div className="fixed bottom-0 left-0 right-0 z-[150] lg:static py-3 px-4 lg:px-[28px] bg-white">
+        <div className="fixed bottom-0 left-0 right-0 z-[150] py-3 px-4 lg:px-[28px] bg-white">
             <nav className="grid grid-cols-4 gap-2 text-gray-600">
                 { menus.map((menu) => (
                     <NavLink key={menu.to} to={menu.to} end={menu.end} aria-label={menu.label}
