@@ -2,15 +2,18 @@ import {useEffect} from "react";
 import {Outlet, useLocation} from "react-router-dom";
 import CommonHeader from "@/layouts/inc/header/common.header.jsx";
 import CommonFooter from "@/layouts/inc/footer/common.footer.jsx";
+import {useFooterStore} from "@/store/index.js";
 
 export default function CommonLayout() {
 
-    // Router
     const location = useLocation();
+    const initFooter = useFooterStore((state) => state.initFooter);
 
-    // 페이지 이동시
+
     useEffect(() => {
 
+        // 초기화
+        initFooter();
         // 스크롤 최상단으로
         document.documentElement.scrollTo({
             top: 0,

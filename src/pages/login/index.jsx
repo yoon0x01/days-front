@@ -1,9 +1,12 @@
 import {useFooterStore} from "@/store/index.js";
 import {useEffect} from "react";
+import {useNavigate} from "react-router-dom";
 
 export default function Login() {
 
     const { setFooter } = useFooterStore();                 // 푸터 정보
+
+    const navigate = useNavigate();         // 페이지 이동
 
     useEffect(() => {
         // 푸터 정보
@@ -11,6 +14,8 @@ export default function Login() {
             isShow: false
         });
     }, [setFooter]);
+
+    // TODO: Days 로고 디자인 변경 필요
 
     return (
         <div className="min-h-screen flex items-center justify-center pt-0 lg:pt-0 pb-0 lg:pb-0">
@@ -28,18 +33,17 @@ export default function Login() {
                                 <span className="px-4 text-sm text-gray-500">기록은 가볍게, 하루는 더 선명하게.</span>
                             </div>
                             <div className="inline-flex justify-between items-center gap-x-8 mx-auto">
-                                <button className="flex flex-col items-center gap-y-3 w-[60px] text-sm text-gray-800"
-                                    onClick="fnShowPop('modal-snsError')">
+                                <button className="flex flex-col items-center gap-y-3 w-[60px] text-sm text-gray-800" onClick={()=> navigate('/')}>
                                     <div className="flex items-center justify-center w-[60px] h-[60px] rounded-full bg-[#FFDA00]">
                                         <img src="/img/ic_sns_kakao.svg" alt="Kakao" className="h-6"/>
                                     </div>
                                 </button>
-                                <button className="flex flex-col items-center gap-y-3 w-[60px] text-sm text-gray-800">
+                                <button className="flex flex-col items-center gap-y-3 w-[60px] text-sm text-gray-800" onClick={()=> navigate('/')}>
                                     <div className="flex items-center justify-center w-[60px] h-[60px] rounded-full bg-[#03C75A]">
                                         <img src="/img/ic_sns_naver_w.svg" alt="Naver" className="h-5.5"/>
                                     </div>
                                 </button>
-                                <button className="flex flex-col items-center gap-y-3 w-[60px] text-sm text-gray-800">
+                                <button className="flex flex-col items-center gap-y-3 w-[60px] text-sm text-gray-800" onClick={()=> navigate('/')}>
                                     <div className="flex items-center justify-center w-[60px] h-[60px] rounded-full bg-[#000000]">
                                         <img src="/img/ic_sns_apple.svg" alt="Apple" className="h-7 mb-1"/>
                                     </div>
