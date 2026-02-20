@@ -1,4 +1,4 @@
-import {useEffect} from "react";
+import {useLayoutEffect} from "react";
 import {Outlet, useLocation} from "react-router-dom";
 import CommonHeader from "@/layouts/inc/header/common.header.jsx";
 import CommonFooter from "@/layouts/inc/footer/common.footer.jsx";
@@ -10,7 +10,7 @@ export default function CommonLayout() {
     const initFooter = useFooterStore((state) => state.initFooter);
 
 
-    useEffect(() => {
+    useLayoutEffect(() => {
 
         // 초기화
         initFooter();
