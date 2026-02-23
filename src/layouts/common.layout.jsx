@@ -1,6 +1,5 @@
 import {useLayoutEffect} from "react";
 import {Outlet, useLocation} from "react-router-dom";
-import CommonHeader from "@/layouts/inc/header/common.header.jsx";
 import CommonFooter from "@/layouts/inc/footer/common.footer.jsx";
 import {useFooterStore} from "@/store/index.js";
 
@@ -25,7 +24,6 @@ export default function CommonLayout() {
 
     return (
         <div>
-            {/*<CommonHeader/>*/}
             <div className="min-h-screen lg:pt-0 lg:pb-0">
                 <Outlet/>
                 <CommonFooter/>
