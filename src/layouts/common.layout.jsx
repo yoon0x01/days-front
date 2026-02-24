@@ -24,7 +24,7 @@ export default function CommonLayout() {
 
     return (
         <div>
-            <div className="min-h-screen lg:pt-0 lg:pb-0">
+            <div className="min-h-screen lg:pt-0 lg:pb-0 bg-slate-50">
                 <Outlet/>
                 <CommonFooter/>
             </div>
